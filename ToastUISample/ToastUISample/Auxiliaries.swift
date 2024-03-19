@@ -44,7 +44,7 @@ struct CustomButton: View {
   @ViewBuilder var body: some View {
     Button(action: action) {
       Text(text)
-      #if os(iOS)
+      #if os(iOS) || os(visionOS)
         .bold()
         .foregroundColor(.white)
         .frame(maxWidth: maxWidth, maxHeight: maxHeight)

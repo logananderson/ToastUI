@@ -34,7 +34,7 @@ struct BuiltInToastViewStyleExample: View {
             .tag(style)
         }
       }
-      #if os(iOS)
+      #if os(iOS) || os(visionOS)
         .pickerStyle(.wheel)
       #elseif os(tvOS)
         .pickerStyle(.segmented)

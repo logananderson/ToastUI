@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-#if os(iOS) || os(tvOS)
+#if os(iOS) || os(tvOS) || os(visionOS)
 final class ToastViewHostingController<Content>: UIHostingController<Content> where Content: View {
   init(rootView: Content, dimmedBackground: Bool) {
     super.init(rootView: rootView)

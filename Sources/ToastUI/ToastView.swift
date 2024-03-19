@@ -218,7 +218,7 @@ where Background: View, Label: View, Content: View {
 
 extension Color {
   static let background = {
-    #if os(iOS)
+    #if os(iOS) || os(visionOS)
     return Color(.secondarySystemBackground)
     #elseif os(tvOS)
     return Color(.darkGray)
@@ -230,7 +230,7 @@ extension Color {
   }()
 
   static let label = {
-    #if os(iOS) || os(tvOS)
+    #if os(iOS) || os(tvOS) || os(visionOS)
     return Color(.label)
     #elseif os(watchOS)
     return Color(.darkGray)

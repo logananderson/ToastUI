@@ -13,7 +13,7 @@ import SwiftUI
 
 let logger = Logger(subsystem: "com.quanshousio.ToastUI", category: "ToastUI")
 
-#if os(iOS) || os(tvOS)
+#if os(iOS) || os(tvOS) || os(visionOS)
 struct ToastViewIsPresentedModifier<ToastContent>: ViewModifier where ToastContent: View {
   @Binding var isPresented: Bool
   let dismissAfter: Double?

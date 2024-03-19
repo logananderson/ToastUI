@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-#if os(iOS) || os(tvOS)
+#if os(iOS) || os(tvOS) || os(visionOS)
 struct IntrospectionViewController: UIViewControllerRepresentable {
   let targetViewController: (UIViewController) -> Void
 
